@@ -1,0 +1,48 @@
+<p>Bạn biết gì về Linux OS?</p>
+<p>(What do you know about Linux OS?)</p>
+<p>Điền câu trả lời</p>
+<p>(Answers)</p>
+
+<p>
+  Câu 1: Cha đẻ của Linux (Who developed Linux): <input
+    type="text"
+    name="chaDe"
+    #ctrl="ngModel"
+    [(ngModel)]="chaDeInputForm"
+  />
+</p>
+<p>
+  Câu 2: Vì sao logo của Linux là chim cánh cụt (Logo Linux): <input
+    type="text"
+    name="logo"
+    #ctrl="ngModel"
+    [(ngModel)]="logoInputForm"
+  />
+</p>
+<p>
+  Câu 3: Vì sao những mã nguồn độc không thể xâm nhập vào Linux OS (Why virus unsuccessfully affects Linux OS):
+  <input
+    type="text"
+    name="v"
+    #ctrl="ngModel"
+    [(ngModel)]="vInputForm"
+  />
+</p>
+<button (click)="submit()">Submit</button>
+
+<p>Câu trả lời</p>
+
+<table>
+  <tr>
+    <th>Câu 1 (developer)</th>
+
+    <th>Câu 2 (logo)</th>
+  
+    <th>Câu 3 (virus) </th>
+  </tr>
+  <tr *ngFor="let cauTraLoi of danhSachTraLoi">
+    <td>{{ cauTraLoi.chaDe }}</td>
+    <td>{{ cauTraLoi.logo }}</td>
+    <td>{{ cauTraLoi.v }}</td>
+  </tr>
+</table>

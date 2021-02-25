@@ -1,7 +1,7 @@
 pipeline {
     
     environment {
-        ProjectCode = "FHM.GHS.Core";
+        ProjectCode = "DevopsTraining";
         BUILD_ID = "${env.BUILD_ID}";        
         BUILD_RELEASE = true;
         WORKSPACE = "${env.WORKSPACE}";
